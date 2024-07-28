@@ -1,0 +1,20 @@
+image size = 1229*1229 px = 1510441 px
+cube size = 6.2 * 6.2 cm2 = 38.44 cm2
+
+pixel per cm = 39293 (452/961) = 39293.47034339
+
+single line:
+image length = 1229px
+cube length = 6.2cm
+ppcm = 1229 / 6.2 = 198 -7/31 = 6145/31 = 198.2258064516
+
+
+using ball reference:
+ball pixel = 1136
+ball length = 6.1 cm
+
+ppcm = 1136 / 6.1 = 186 14/61 = 11360/61 = 186.2295081967
+
+
+
+1116 / 6.1 = 182.95081967213114754098360655738
