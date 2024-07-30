@@ -12,7 +12,7 @@ def main():
     model = YOLO(model=model_name)
     
     # image on which test will be performed
-    image_name = 'apple_96gm'
+    image_name = 'apple_86gm'
     img_paths: list[str] = [f'Images\\{image_name}.jpg']
 
     # get the prediction on

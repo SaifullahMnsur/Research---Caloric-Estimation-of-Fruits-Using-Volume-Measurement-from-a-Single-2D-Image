@@ -42,6 +42,6 @@ def plot_segments( x: list[int], y: list[int], volume: float, weight: float, cal
     plt.gca().invert_yaxis()
     plt.grid(True)
     if path is not None:
-        plt.savefig(f"{path}\\apple_graph.png")
+        plt.savefig(f"{path}\\segmentation_plotting.png")
     plt.show()
     plt.close()
