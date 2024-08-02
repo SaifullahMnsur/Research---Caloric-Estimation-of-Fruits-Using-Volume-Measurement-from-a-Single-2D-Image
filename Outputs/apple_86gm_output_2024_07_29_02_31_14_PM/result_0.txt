@@ -1,8 +1,0 @@
-Density: 0.75/cm^2
-Average Pixel per cm: 162.00
-Average calorie per hundred grams: 52.0 kcal
-Predicted item: apple
-Confidence: 90.68%
-Final Average volume: 151.23 cm^3
-Final weight: 113.42 grams
-Final calorie: 58.98 calorie

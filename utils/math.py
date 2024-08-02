@@ -23,7 +23,7 @@ class Estimator:
         self.cphg = cphg
         
         # estimation results
-        self._total_volume = None
+        self._volume = None
         self._weight = None
         self._calorie = None    
 
@@ -62,31 +62,31 @@ class Estimator:
         sum_volume = (self.calc_volume(x, y, x_mid) // 2)
 
         # volume is measured for both left and right half's revolution, get the mean
-        final_volume = (sum_volume / self.ppqcm) / (np.cos(np.radians(object_fov / 2)) ** 2)
+        volume = (sum_volume / self.ppqcm) / (np.cos(np.radians(object_fov / 2)) ** 2)
 
-        self._final_volume = final_volume
-        self._weight = self.final_volume * self.density
+        self._volume = volume
+        self._weight = self._volume * self.density
         self._calorie = self.weight * self.cphg
 
-        uplt.plot_segments( x, y, self.final_volume, self.weight, self.calorie, save_dir)
+        uplt.plot_segments( x, y, self._volume, self._weight, self._calorie, save_dir)
         return
     
     
     # properties here
 
     @property
-    def total_volume(self):
-        if self.total_volume is None:
-            raise ValueError("total_volume is not initialized. Call 'estimate' method first")
-        return self.total_volume
+    def volume(self):
+        if self._volume is None:
+            raise ValueError("volume is not initialized. Call 'estimate' method first")
+        return self._volume
     @property
     def weight(self):
-        if self._left_volume is None:
+        if self._weight is None:
             raise ValueError("weight is not initialized. Call 'estimate' method first")
-        return self.weight
+        return self._weight
     @property
     def calorie(self):
-        if self.calorie is None:
+        if self._calorie is None:
             raise ValueError("calorie is not initialized. Call 'estimate' method first")
-        return self.calorie
+        return self._calorie
     
